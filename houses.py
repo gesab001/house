@@ -36,6 +36,8 @@ while True:
   jsondata["items"].append(itemToAdd)
   with open("houses.json", "w") as outfile:
    json.dump(jsondata, outfile, indent=4, sort_keys=True)
+  command = "python3 pushtogit.py"
+  subprocess.call(command, shell=True)  
 
  else:
   for h in jsondata["items"]:
