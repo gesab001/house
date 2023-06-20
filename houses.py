@@ -21,6 +21,7 @@ def viewItems(jsondata):
    url = h["url"]
    #webbrowser.get(chrome_path).open(url)
 while True:
+ subprocess.call("git pull", shell=True)
  fopen = open("houses.json", "r")
  jsondata = json.loads(fopen.read())
  fopen.close()
